@@ -1,0 +1,36 @@
+// java codes for begginers
+// Github  : chrand267
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        // Shopping cart program
+
+        Scanner scanner = new Scanner(System.in);
+
+        String item;
+        double price;
+        int quantity;
+        char currency ='$';
+        double total;
+
+        System.out.println("What item would you like to buy ?: ");
+        item = scanner.nextLine();
+
+        System.out.println("What is the price for that item ?: ");
+        price = scanner.nextDouble();
+
+        System.out.println("How many you want ?: ");
+        quantity = scanner.nextInt();
+
+        total = price * quantity;
+
+        System.out.println("You have bought : " + quantity + " " + item);
+        System.out.println("The total price will be : " + currency + total);
+
+        scanner.close();
+    }
+}
+
