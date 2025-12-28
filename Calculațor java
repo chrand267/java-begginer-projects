@@ -1,0 +1,52 @@
+
+
+package calc;
+
+import java.util.*;
+
+public class Calculator {
+
+    public static void main(String[] args) {
+    	
+    	
+    	double rezultat = 0;        
+        boolean valid = true;       
+        
+        Scanner scanner = new Scanner(System.in);  
+
+        System.out.print("Introdu primul numar: ");
+        double a = scanner.nextDouble();
+
+        System.out.print("Introdu operatorul (+, -, *, /): ");
+        char opr = scanner.next().charAt(0);
+
+        System.out.print("Introdu al doilea numar: ");
+        double b = scanner.nextDouble();
+
+
+        switch(opr) {                        
+            case '+': rezultat = a + b;      
+                break;                       
+            case '-': rezultat = a - b;      
+                break;                       
+            case '*': rezultat = a * b;      
+                break;                       
+            case '/':                        
+                if(b != 0) rezultat = a / b; 
+                else {
+                    System.out.println("Eroare!");
+                    valid = false;
+                }
+                break;
+            default:                                       
+                System.out.println("Operator invalid!");   
+                valid = false;                             
+        } 
+
+        if(valid)
+            System.out.println("Rezultat: " + rezultat);
+
+        scanner.close();
+    }
+}
+
